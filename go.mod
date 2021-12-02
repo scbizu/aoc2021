@@ -1,0 +1,3 @@
+module git.ezbuy.me/scbizu/aoc2021
+
+go 1.17

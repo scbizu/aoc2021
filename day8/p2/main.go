@@ -33,16 +33,16 @@ func main() {
 			}
 			switch len(dg) {
 			case 2:
-				pattern[sortDigit(dg)] = "1"
-				oneP = sortDigit(dg)
+				pattern[sdg] = "1"
+				oneP = sdg
 			case 4:
-				pattern[sortDigit(dg)] = "4"
-				fourP = sortDigit(dg)
+				pattern[sdg] = "4"
+				fourP = sdg
 			case 3:
-				pattern[sortDigit(dg)] = "7"
-				sevenP = sortDigit(dg)
+				pattern[sdg] = "7"
+				sevenP = sdg
 			case 7:
-				pattern[sortDigit(dg)] = "8"
+				pattern[sdg] = "8"
 			}
 		}
 
@@ -55,11 +55,11 @@ func main() {
 				cs := strIntersectCount(sdg, sevenP)
 				switch {
 				case co == 2 && cf == 3 && cs == 3:
-					pattern[sortDigit(dg)] = "3"
+					pattern[sdg] = "3"
 				case co == 1 && cf == 3 && cs == 2:
-					pattern[sortDigit(dg)] = "5"
+					pattern[sdg] = "5"
 				case co == 1 && cf == 2 && cs == 2:
-					pattern[sortDigit(dg)] = "2"
+					pattern[sdg] = "2"
 				}
 			case 6:
 				co := strIntersectCount(sdg, oneP)
@@ -67,11 +67,11 @@ func main() {
 				cs := strIntersectCount(sdg, sevenP)
 				switch {
 				case co == 1 && cf == 3 && cs == 2:
-					pattern[sortDigit(dg)] = "6"
+					pattern[sdg] = "6"
 				case co == 2 && cf == 4 && cs == 3:
-					pattern[sortDigit(dg)] = "9"
+					pattern[sdg] = "9"
 				case co == 2 && cf == 3 && cs == 3:
-					pattern[sortDigit(dg)] = "0"
+					pattern[sdg] = "0"
 				}
 			}
 		}
